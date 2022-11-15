@@ -18,6 +18,7 @@ export default () => {
     });
     const {navigate} = useNavigation();
     const submitForm = async() => {
+        alert('Logando');
         try {
             const loginRequest = await auth.authenticate(inputs.email, inputs.password);
             if(loginRequest === 202){

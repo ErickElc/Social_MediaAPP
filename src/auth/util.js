@@ -17,8 +17,6 @@ export const getUserLocalStorage = async () => {
         console.log(error);
     }
 }
-
-
 export  const LoginRequest = async (email, password) => {
     try {
         const request = await http.post('api/users/login', {email, password});
