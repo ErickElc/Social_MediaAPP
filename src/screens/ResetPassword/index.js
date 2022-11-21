@@ -11,6 +11,7 @@ import * as S from './styles';
 import { TextInput, Button } from '@react-native-material/core';
 import http from '../../api/api';
 import { StatusBar } from 'expo-status-bar';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default () => {
     const {navigate} = useNavigation();
@@ -35,48 +36,51 @@ export default () => {
         }
     }
     return(
-        <S.ContainerSafe>
-            
-            <S.ContainerLogin>
-                <S.TextoTelasAutenticacao>Recuperar senha</S.TextoTelasAutenticacao>
-                <TextInput 
-                    required
-                    label="Digite seu email" 
-                    variant="standard"
-                    keyboardType='email-address'
-                    value={inputs.email}
-                    style={{width: '100%', marginBottom: 20, marginTop: 30}} 
-                    color="black"
-                    fullWidth
-                    onChange={(e) => setInputs({...inputs, email: e.nativeEvent.text})}
-                />
-                <TextInput 
-                    required
-                    label="cpf" 
-                    variant="standard"
-                    keyboardType='numeric'
-                    value={inputs.cpf}
-                    style={{width: '100%', marginBottom: 20}} 
-                    color="black"
-                    fullWidth
-                    maxLength={11}
-                    onChange={(e) => setInputs({...inputs, cpf: e.nativeEvent.text})}
-                />
-                <TextInput 
-                    required
-                    label="Digite sua senha"
-                    secureTextEntry={true}
-                    keyboardType='hidden-password'
-                    variant="standard"
-                    value={inputs.password}
-                    style={{width: '100%', marginBottom: 20}} 
-                    color="black"
-                    fullWidth
-                    onChange={(e) => setInputs({...inputs, password: e.nativeEvent.text})}
-                />
-                <Button variant="contained" title="Resetar" tintColor="white" color='blue' style={{width: '100%'}} onPress={submitForm}/>
-                <S.TextH2 onPress={() => navigate('Cadastro')}>Não tem Cadastro?</S.TextH2>
-            </S.ContainerLogin>
-        </S.ContainerSafe>
+        <LinearGradient
+            colors={['rgba(141,5,240,1)', '#66058d', '#db811a']}
+        >
+            <S.ContainerSafe>
+                <S.ContainerLogin>
+                    <S.TextoTelasAutenticacao>Recuperar senha</S.TextoTelasAutenticacao>
+                    <TextInput 
+                        required
+                        label="Digite seu email" 
+                        variant="outlined"
+                        keyboardType='email-address'
+                        value={inputs.email}
+                        style={{width: '100%', marginBottom: 20, marginTop: 30}} 
+                        color="black"
+                        fullWidth
+                        onChange={(e) => setInputs({...inputs, email: e.nativeEvent.text})}
+                    />
+                    <TextInput 
+                        required
+                        label="cpf" 
+                        variant="outlined"
+                        keyboardType='numeric'
+                        value={inputs.cpf}
+                        style={{width: '100%', marginBottom: 20}} 
+                        color="black"
+                        fullWidth
+                        maxLength={11}
+                        onChange={(e) => setInputs({...inputs, cpf: e.nativeEvent.text})}
+                    />
+                    <TextInput 
+                        required
+                        label="Digite sua senha"
+                        secureTextEntry={true}
+                        keyboardType='hidden-password'
+                        variant="outlined"
+                        value={inputs.password}
+                        style={{width: '100%', marginBottom: 20}} 
+                        color="black"
+                        fullWidth
+                        onChange={(e) => setInputs({...inputs, password: e.nativeEvent.text})}
+                    />
+                    <Button variant="contained" title="Resetar" tintColor="white" color='blue' style={{width: '100%'}} onPress={submitForm}/>
+                    <S.TextH2 onPress={() => navigate('Cadastro')}>Não tem Cadastro?</S.TextH2>
+                </S.ContainerLogin>
+            </S.ContainerSafe>
+        </LinearGradient>
     )
 }

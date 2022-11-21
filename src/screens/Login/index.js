@@ -44,7 +44,7 @@ export default () => {
                     <TextInput 
                         required
                         label="Digite seu email" 
-                        variant="standard"
+                        variant="outlined"
                         keyboardType='email-address'
                         value={inputs.email}
                         style={{width: '100%', marginBottom: 20, marginTop: 30}} 
@@ -57,7 +57,7 @@ export default () => {
                         label="Digite sua senha"
                         secureTextEntry={true}
                         keyboardType='hidden-password'
-                        variant="standard"
+                        variant="outlined"
                         value={inputs.password}
                         style={{width: '100%', marginBottom: 20}} 
                         color="black"

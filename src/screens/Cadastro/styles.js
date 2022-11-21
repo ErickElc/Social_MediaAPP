@@ -9,7 +9,7 @@ export const ContainerSafe = styled.SafeAreaView`
 `
 export const Scroller = styled.ScrollView`
     flex: 1;
-    height: 90%;
+    height: 100%;
     width: 100%;
 `
 export const TextH2 = styled.Text`
@@ -23,7 +23,7 @@ export const ContainerLogin = styled.View`
     margin-top: 100px;
     background-color: whitesmoke;
     display: flex;
-    height: 70%;
+    height: 75%;
     width: 90%;
     flex-flow: column wrap;
     justify-content: center;

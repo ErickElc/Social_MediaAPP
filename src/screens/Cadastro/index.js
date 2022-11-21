@@ -3,6 +3,7 @@ import * as S from './styles';
 import { TextInput, Button } from '@react-native-material/core';
 import { useNavigation } from '@react-navigation/native';
 import http from '../../api/api';
+import { LinearGradient } from 'expo-linear-gradient';
 export default () => {
     const {navigate} = useNavigation();
     const [inputs , setInputs] = useState({
@@ -42,7 +43,7 @@ export default () => {
                         <TextInput 
                             required
                             label="Digite seu nome" 
-                            variant="standard"
+                            variant="outlined"
                             keyboardType='default'
                             value={inputs.name}
                             style={{width: '100%', marginBottom: 20}} 
@@ -53,7 +54,7 @@ export default () => {
                         <TextInput 
                             required
                             label="Digite seu idade" 
-                            variant="standard"
+                            variant="outlined"
                             keyboardType='default'
                             value={inputs.age}
                             style={{width: '100%', marginBottom: 20}} 
@@ -64,7 +65,7 @@ export default () => {
                         <TextInput 
                             required
                             label="Digite seu CPF" 
-                            variant="standard"
+                            variant="outlined"
                             keyboardType='default'
                             value={inputs.cpf}
                             style={{width: '100%', marginBottom: 20}} 
@@ -75,7 +76,7 @@ export default () => {
                         <TextInput 
                             required
                             label="Digite seu email" 
-                            variant="standard"
+                            variant="outlined"
                             keyboardType='email-address'
                             value={inputs.email}
                             style={{width: '100%', marginBottom: 20}} 
@@ -88,7 +89,7 @@ export default () => {
                             label="Digite sua senha"
                             secureTextEntry={true}
                             keyboardType='hidden-password'
-                            variant="standard"
+                            variant="outlined"
                             value={inputs.password}
                             style={{width: '100%', marginBottom: 20}} 
                             color="black"
