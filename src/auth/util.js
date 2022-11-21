@@ -1,21 +1,15 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import http from "../api/api";
-export const setUserLocalStorage = async (userOrData) => {
-    try {
-        await AsyncStorage.setItem('user', JSON.stringify(userOrData));
-    } catch (error) {
-        console.log(error);
-    }
+export const setUserLocalStorage = async (token, email) => {
+    AsyncStorage.setItem('token', token);
+    AsyncStorage.setItem('email', email); 
 }
 
 export const getUserLocalStorage = async () => {
-    try {
-        const user = await AsyncStorage.getItem('user');
-        return JSON.parse(user);
-    } catch (error) {
-        console.log(error);
-    }
+    const token = await AsyncStorage.getItem('token');
+    const email = await AsyncStorage.getItem('email');
+    return {token, email};
 }
 export  const LoginRequest = async (email, password) => {
     try {

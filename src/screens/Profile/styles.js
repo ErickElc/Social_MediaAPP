@@ -3,10 +3,10 @@ import styled from "styled-components/native";
 
 
 
-
 export const ContainerSafe = styled.SafeAreaView`
     display: flex;
-    flex-flow: column-reverse wrap;
+    /* margin-top: 100px; */
+    flex-flow: column;
     justify-content: space-between;
     align-items: center;
     height: 100%;
@@ -19,11 +19,27 @@ export const ScrowView = styled.ScrollView`
     flex-flow: column-reverse;
 `;
 export const ContainerHeader = styled.View`
-    padding-top: 20px;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+`;
+export const ContainerButton = styled.TouchableOpacity`
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 20px;
+    align-self: center;
+    margin-bottom: 50px;
+`;
+export const TextButton = styled.Text`
+    font-size: 20px;
+    align-self: flex-start;
 `;
 export const PerfilCard = styled.View`
     width: 290px;
-    height: 250px;
+    height: 270px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -37,7 +53,7 @@ export const PerfilCard = styled.View`
 export const PerfilCardText = styled.Text`
     font-size: 23px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: white;
 `;
 export const ContainerMain  = styled.View`
@@ -78,7 +94,6 @@ export const ImageTemplate = styled.Image`
 `;
 
 export const TextH1 = styled.Text`
-
     font-weight: bold;
     font-size:  24px;
     color: white;
@@ -92,9 +107,10 @@ export const ContainerIcon = styled.View`
 `;
 export const TextH2 = styled.Text`
     padding-bottom: 20px;
-
+    font-size: 24px;
+    margin-top: 100px;
 `;
 
 export const TextH3 = styled.Text`
-
+    padding-bottom: 20px;
 `;

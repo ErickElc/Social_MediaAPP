@@ -1,5 +1,5 @@
-import { getUserLocalStorage, LoginRequest, setUserLocalStorage } from "./util";
-import { createContext, useContext, useEffect, useState} from "react";
+import { LoginRequest, setUserLocalStorage } from "./util";
+import { createContext, useContext, useState} from "react";
 import http from "../api/api";
 
 export const AuthContext = createContext({});
@@ -7,7 +7,6 @@ export const AuthContext = createContext({});
 export function AuthProvider({ children }) {
     const [user, setUser] = useState();
     const VerifyLoggin = async () => {
-        // const User = await getUserLocalStorage();
         try {
             await http.post('auth/free',{
                 token: user?.token

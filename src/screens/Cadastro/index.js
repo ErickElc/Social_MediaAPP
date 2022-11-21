@@ -31,70 +31,75 @@ export default () => {
         }
     }
     return(
-        <S.ContainerSafe>
-            <S.ContainerLogin>
-                <S.TextoTelasAutenticacao>Cadastro</S.TextoTelasAutenticacao>
-                <S.Scroller showsVerticalScrollIndicator={false}>
-                    <TextInput 
-                        required
-                        label="Digite seu nome" 
-                        variant="standard"
-                        keyboardType='default'
-                        value={inputs.name}
-                        style={{width: '100%', marginBottom: 20}} 
-                        color="black"
-                        fullWidth
-                        onChange={(e) => setInputs({...inputs, name: e.nativeEvent.text})}
-                    />
-                    <TextInput 
-                        required
-                        label="Digite seu idade" 
-                        variant="standard"
-                        keyboardType='default'
-                        value={inputs.age}
-                        style={{width: '100%', marginBottom: 20}} 
-                        color="black"
-                        fullWidth
-                        onChange={(e) => setInputs({...inputs, age: e.nativeEvent.text})}
-                    />
-                    <TextInput 
-                        required
-                        label="Digite seu CPF" 
-                        variant="standard"
-                        keyboardType='default'
-                        value={inputs.cpf}
-                        style={{width: '100%', marginBottom: 20}} 
-                        color="black"
-                        fullWidth
-                        onChange={(e) => setInputs({...inputs, cpf: e.nativeEvent.text})}
-                    />
-                    <TextInput 
-                        required
-                        label="Digite seu email" 
-                        variant="standard"
-                        keyboardType='email-address'
-                        value={inputs.email}
-                        style={{width: '100%', marginBottom: 20}} 
-                        color="black"
-                        fullWidth
-                        onChange={(e) => setInputs({...inputs, email: e.nativeEvent.text})}
-                    />
-                    <TextInput 
-                        required
-                        label="Digite sua senha"
-                        secureTextEntry={true}
-                        keyboardType='hidden-password'
-                        variant="standard"
-                        value={inputs.password}
-                        style={{width: '100%', marginBottom: 20}} 
-                        color="black"
-                        fullWidth
-                        onChange={(e) => setInputs({...inputs, password: e.nativeEvent.text})}
-                    />
-                </S.Scroller>
-                <Button variant="contained" title="Cadastrar" tintColor="white" color='blue' style={{width: '100%'}} onPress={submitForm}/>
-                <S.TextH2 onPress={() => navigate('Login')}>Já tem Cadastro?</S.TextH2>
-            </S.ContainerLogin>
-        </S.ContainerSafe>
+        <LinearGradient
+            colors={['rgba(141,5,240,1)', '#66058d', '#db811a']}
+        >
+
+            <S.ContainerSafe>
+                <S.ContainerLogin>
+                    <S.TextoTelasAutenticacao>Cadastro</S.TextoTelasAutenticacao>
+                    <S.Scroller showsVerticalScrollIndicator={false}>
+                        <TextInput 
+                            required
+                            label="Digite seu nome" 
+                            variant="standard"
+                            keyboardType='default'
+                            value={inputs.name}
+                            style={{width: '100%', marginBottom: 20}} 
+                            color="black"
+                            fullWidth
+                            onChange={(e) => setInputs({...inputs, name: e.nativeEvent.text})}
+                        />
+                        <TextInput 
+                            required
+                            label="Digite seu idade" 
+                            variant="standard"
+                            keyboardType='default'
+                            value={inputs.age}
+                            style={{width: '100%', marginBottom: 20}} 
+                            color="black"
+                            fullWidth
+                            onChange={(e) => setInputs({...inputs, age: e.nativeEvent.text})}
+                        />
+                        <TextInput 
+                            required
+                            label="Digite seu CPF" 
+                            variant="standard"
+                            keyboardType='default'
+                            value={inputs.cpf}
+                            style={{width: '100%', marginBottom: 20}} 
+                            color="black"
+                            fullWidth
+                            onChange={(e) => setInputs({...inputs, cpf: e.nativeEvent.text})}
+                        />
+                        <TextInput 
+                            required
+                            label="Digite seu email" 
+                            variant="standard"
+                            keyboardType='email-address'
+                            value={inputs.email}
+                            style={{width: '100%', marginBottom: 20}} 
+                            color="black"
+                            fullWidth
+                            onChange={(e) => setInputs({...inputs, email: e.nativeEvent.text})}
+                        />
+                        <TextInput 
+                            required
+                            label="Digite sua senha"
+                            secureTextEntry={true}
+                            keyboardType='hidden-password'
+                            variant="standard"
+                            value={inputs.password}
+                            style={{width: '100%', marginBottom: 20}} 
+                            color="black"
+                            fullWidth
+                            onChange={(e) => setInputs({...inputs, password: e.nativeEvent.text})}
+                        />
+                    </S.Scroller>
+                    <Button variant="contained" title="Cadastrar" tintColor="white" color='blue' style={{width: '100%'}} onPress={submitForm}/>
+                    <S.TextH2 onPress={() => navigate('Login')}>Já tem Cadastro?</S.TextH2>
+                </S.ContainerLogin>
+            </S.ContainerSafe>
+        </LinearGradient>
     )
 }

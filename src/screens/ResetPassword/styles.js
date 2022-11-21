@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { Colors } from '../../config/Colors';
 
 export const ContainerSafe = styled.SafeAreaView`
-    background-image: linear-gradient(to top, #66058d, #db811a);
+    background-color: #5800FF;
     height: 100%;
     display: flex;
     justify-content: center;
